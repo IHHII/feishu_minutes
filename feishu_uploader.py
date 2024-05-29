@@ -57,7 +57,7 @@ class FeishuUploader:
     # 分片上传文件（预上传）
     # doc: https://open.feishu.cn/document/server-docs/docs/drive-v1/upload/multipart-upload-file-/upload_prepare
     def prepare_upload(self):
-        file_name = self.file_path.split("\\")[-1]
+        file_name = self.file_path.split("/")[-1]
         # 如果文件名中包含后缀，需要去掉后缀
         if '.' in file_name:
             file_name = file_name[:file_name.rfind('.')]
